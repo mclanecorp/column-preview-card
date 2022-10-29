@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Inter&family=Lexend+Deca&family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@500;900&display=swap");
+
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+  --Verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--Verylightgray);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--Verylightgray);
+}
+.containair-column {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.containair-column .sedans {
+  background-color: var(--Brightorange);
+  padding: 40px;
+  grid-column: 2;
+  border-radius: 10px 0 0 10px;
+}
+.containair-column .suvs {
+  background-color: var(--Darkcyan);
+  padding: 40px;
+}
+.containair-column .luxury {
+  background-color: var(--Verydarkcyan);
+  padding: 40px;
+  border-radius: 0 10px 10px 0;
+}
+.containair-column h1 {
+  color: var(--Verylightgray);
+  font-family: Big Shoulders Display;
+  margin: 20px 0;
+  font-weight: 700;
+}
+.containair-column p {
+  color: var(--Transparentwhite);
+  font-family: Lexend Deca;
+  font-weight: 400;
+  font-size: 0.93em;
+  margin: 0 20px 90px 0;
+}
+.containair-column button {
+  border: none;
+  font-family: Lexend Deca;
+  font-weight: 400;
+  font-size: 0.93em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 60%;
+  background-color: var(--Verylightgray);
+  cursor: pointer;
+}
+.sedans button {
+  color: var(--Brightorange);
+}
+.suvs button {
+  color: var(--Verydarkcyan);
+}
+.luxury button {
+  color: var(--Darkcyan);
+}
+.containair-column button:hover {
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid var(--Verylightgray);
+  color: var(--Verylightgray);
+}
+
+@media screen and (max-width: 380px) {
+  main {
+    padding: 20px;
+  }
+  .containair-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .containair-column .sedans {
+    border-radius: 10px 10px 0 0px;
+  }
+  .containair-column .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+  .containair-column p {
+    margin-bottom: 20px;
+  }
+}
